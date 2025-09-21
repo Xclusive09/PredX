@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+/* Theme setup for Ocean Blue */
+@theme {
+  /* Colors */
+  --color-dapp-primary: #2563EB; /* Royal Blue */
+  --color-dapp-secondary: #14B8A6; /* Teal */
+  --color-dapp-accent: #38BDF8; /* Sky Blue */
+  --color-dapp-neutral: #FAFAFA; /* Off-White */
+  --color-dapp-dark: #0F172A; /* Deep Slate for contrast */
+
+  /* Fonts */
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-strong: 0 6px 20px rgba(0, 0, 0, 0.18);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+}
+
+/* Base styles */
+html,
+body {
+  @apply bg-dapp-neutral text-dapp-dark font-body;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading text-dapp-primary;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-dapp-primary text-white px-4 py-2 rounded-md shadow-soft transition-all duration-200;
+}
+.btn-primary:hover {
+  @apply bg-dapp-secondary shadow-medium;
+}
+
+.btn-accent {
+  @apply bg-dapp-accent text-dapp-dark px-4 py-2 rounded-md shadow-soft transition-all duration-200;
+}
+.btn-accent:hover {
+  @apply bg-dapp-primary text-white shadow-medium;
+}
+
+/* Cards */
+.card {
+  @apply bg-white shadow-soft rounded-lg p-4 border border-gray-200;
+}
+.card:hover {
+  @apply shadow-medium;
+}
+
+/* Inputs */
+.input {
+  @apply border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-dapp-primary transition-all;
+}
+
+/* Betting-specific styles */
+.market-list li {
+  @apply flex justify-between items-center;
+}
+.market-list button {
+  @apply ml-2 p-1 rounded transition-colors;
+}
